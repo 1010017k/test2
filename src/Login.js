@@ -15,7 +15,7 @@ const Login = () => {
       setError("");
       return;
     }
-    setError("メールアドレスが有効ではありません");
+    setError("E-mail address is invalid");
     return false;
   };
 
@@ -23,20 +23,20 @@ const Login = () => {
     <>
       <Form onSubmit={handleSubmit} noValidate>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>メールアドレス</Form.Label>
+          <Form.Label>E-mail</Form.Label>
           <Form.Control
             type="email"
-            placeholder="メールアドレス入力"
+            placeholder="email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>パスワード</Form.Label>
+          <Form.Label>Password</Form.Label>
           <Form.Control
             type="password" //type="text"にしてみる
-            placeholder="パスワード入力"
+            placeholder="Fill Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -54,7 +54,7 @@ const Login = () => {
         )}
 
         <Button data-testid="submit" variant="primary" type="submit">
-          送信
+          Send
         </Button>
       </Form>
     </>
